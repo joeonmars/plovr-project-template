@@ -7,6 +7,12 @@ Plovr automatically compiles Closure project code, as well as Closure Soy templa
 
 #System Requirements:
 JRE 7 & JDK 7 - Download from www.oracle.com
+if still there's issue when building plovr after upgrade, try
+
+$ export JAVA_HOME=$(/usr/libexec/java_home)
+
+$ echo $JAVA_HOME
+/Library/Java/JavaVirtualMachines/1.7.0.jdk/Contents/Home
 
 
 #Instructions:
