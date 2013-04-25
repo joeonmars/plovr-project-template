@@ -73,6 +73,11 @@ example.controllers.NavigationController.prototype.replaceToken = function(token
 };
 
 
+example.controllers.NavigationController.prototype.handleToken = function(token){
+	console.log('handle token: ' + token);
+};
+
+
 example.controllers.NavigationController.prototype.onNavigate = function(e){
 	// validate the token by HTML5 history API support,
 	// optionally append or remove hash fragment,
@@ -101,8 +106,7 @@ example.controllers.NavigationController.prototype.onNavigate = function(e){
 	if(this._token === e.token) return false;
 	else this._token = e.token;
 
-	//
-	console.log(this.getToken());
+	this.handleToken( this.getToken() );
 };
 
 
