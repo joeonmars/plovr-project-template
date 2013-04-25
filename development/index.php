@@ -23,6 +23,7 @@
 		<!-- third-party -->
 		<script src="/js/third-party/signals.min.js"></script>
 		<script src="/js/third-party/crossroads.min.js"></script>
+		<script src="/js/third-party/modernizr-latest.js"></script>
 		<script src="/js/third-party/greensock/TweenMax.min.js"></script>
 
 		<!-- project js -->
