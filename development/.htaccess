@@ -1,5 +1,15 @@
 # html5 pushstate (history) support:
 RewriteEngine On
+
+###################################################
+# Do not process images or CSS files further      #
+###################################################
+# No more processing occurs if this rule is       #
+# successful                                      #
+###################################################
+
+RewriteRule \.(css|jpe?g|gif|png|xml|json)$ - [L]
+
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_URI} !index
