@@ -82,20 +82,20 @@ example.controllers.NavigationController.prototype.onNavigate = function(e){
 	// validate the token by HTML5 history API support,
 	// optionally append or remove hash fragment,
 	// and reset the window location
-	var tokenStr = goog.string.remove(window.location.href, example.Url.ORIGIN);
+	var tokenStr = goog.string.remove(window.location.href, example.Config.basePath);
 
 	if(e.token === '' && tokenStr !== '') {
 		if(this._useHistoryAPI) {
 			// indicates a possible hash bang to be removed
 			if(goog.string.startsWith(tokenStr, '#/')) {
 				var token = tokenStr.substring(2);
-				window.location = example.Url.ORIGIN + token;
+				window.location = example.Config.basePath + token;
 			}
 		}else{
 			// indicates a possible lack of hash bang
 			if(!goog.string.startsWith(tokenStr, '#/')) {
 				var token = ('#/').concat(tokenStr);
-				window.location = example.Url.ORIGIN + token;
+				window.location = example.Config.basePath + token;
 			}
 		}
 

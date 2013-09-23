@@ -7,11 +7,11 @@ goog.require('soy');
 goog.require('example.templates');
 goog.require('example.controllers.NavigationController');
 
-example.Url = {
-	ORIGIN: window.location.protocol + '//' + window.location.hostname + '/'
-};
+example.Config = {};
 
-example.main = function() {
+example.main = function( config ) {
+	example.Config = config;
+	
 	goog.fx.anim.setAnimationWindow(window);
 
 	//example.controllers.NavigationController.Implementation = example.controllers.NavigationController.HASH;
