@@ -19,3 +19,7 @@ rsync -av \
 	--exclude='js/main.js' \
 	'development/' \
 	'deploy' \
+
+#delete compiled js in development directory
+COMPILED_JS="development/js/main-compiled.js"
+[[ -f "$COMPILED_JS" ]] && rm -f "$COMPILED_JS"
