@@ -7,6 +7,7 @@
   "mode": "ADVANCED",
   "level": "QUIET",
   "externs": [
-  	/*"js/third-party/greensock/TweenMax.min.js"*/
+  	"development/js/externs.js",
+  	"development/js/third-party/greensock/TweenMax.min.js"
 	]
 }
